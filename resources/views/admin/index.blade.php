@@ -13,6 +13,14 @@
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+
+    <!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+</head>
+
+
 </head>
 
 <body class="sidebar-menu-collapsed">
@@ -36,92 +44,24 @@
       </ol>
     </nav>
 
-
-    <!-- statistics data -->
-    <div class="statistics">
+    <div class="accordions">
       <div class="row">
-        <div class="col-xl-6 pr-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-users"> </i>
-                <h3 class="text-primary number">29.75 M</h3>
-                <p class="stat-text">Total Users</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-eye"> </i>
-                <h3 class="text-secondary number">51.25 K</h3>
-                <p class="stat-text">Daily Visitors</p>
+        <!-- accordion style 1 -->
+        <div class="col-lg-12 mb-4">
+          <div class="card card_border">
+            
+            <div class="card-body">
+             
+               
+                @yield('content')
+
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-6 pl-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cloud-download"> </i>
-                <h3 class="text-success number">166.89 M</h3>
-                <p class="stat-text">Downloads</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cart"> </i>
-                <h3 class="text-danger number">1,250k</h3>
-                <p class="stat-text">Purchased</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- //accordion style 1 -->
       </div>
     </div>
-    <!-- //statistics data -->
-
-    <!-- charts -->
-    <div class="chart">
-      <div class="row">
-        <div class="col-lg-6 pr-lg-2 chart-grid">
-          <div class="card text-center card_border">
-            <div class="card-header chart-grid__header">
-              Bar Chart
-            </div>
-            <div class="card-body">
-              <!-- bar chart -->
-              <div id="container">
-                <canvas id="barchart"></canvas>
-              </div>
-              <!-- //bar chart -->
-            </div>
-            <div class="card-footer text-muted chart-grid__footer">
-              Updated 2 hours ago
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 pl-lg-2 chart-grid">
-          <div class="card text-center card_border">
-            <div class="card-header chart-grid__header">
-              Line Chart
-            </div>
-            <div class="card-body">
-              <!-- line chart -->
-              <div id="container">
-                <canvas id="linechart"></canvas>
-              </div>
-              <!-- //line chart -->
-            </div>
-            <div class="card-footer text-muted chart-grid__footer">
-              Updated just now
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- //charts -->
-
-   
 
   </div>
   <!-- //content -->
@@ -131,7 +71,7 @@
   <!--footer section start-->
 <footer class="dashboard">
   <p>&copy 2022 BMS. All Rights Reserved | Design by <a href="/" target="_blank"
-      class="text-primary">W3layouts.</a></p>
+      class="text-primary">BMS</a></p>
 </footer>
 <!--footer section end-->
 <!-- move top -->
@@ -213,6 +153,7 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{url('Backend/assets/js/bootstrap.min.js')}}"></script>
+
 
 </body>
 
