@@ -14,11 +14,12 @@
                     <h3>Create Post <span></span></h3>
                 </div>
                 <div class="card-body">
-                    <form action="#" method="post">
+                    <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label input__label">Title</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control input-style" id="inputEmail3"
+                                <input name="title" type="text" class="form-control input-style" id="inputEmail3"
                                     placeholder="Post Title">
                             </div>
                         </div>
@@ -26,11 +27,10 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Category</label>
                             <div class="col-sm-10">
-                            <select class="custom-select input-style" required>
-                                <option value="">Select Category</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select name="category" class="custom-select input-style" required>
+                                @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
                             </select>
                             </div>
                         </div>
@@ -38,14 +38,14 @@
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Description</label>
                             <div class="col-sm-10">
-                                     <textarea class="form-control" name="summernote" id="summernote"></textarea>                       
+                                     <textarea name="description" class="form-control" name="summernote" id="summernote"></textarea>                       
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Image</label>
                             <div class="col-sm-10">
                                     <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                            <input name="image" type="file" class="custom-file-input" id="validatedCustomFile" required>
                                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                                         </div>
@@ -55,7 +55,8 @@
                                     
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary btn-style">Sign in</button>
+                                <button type="submit" class="btn btn-primary btn-style">Save</button>
+                                <a href="{{route('post.list')}}" class="btn btn-danger btn-style">Back</a>
                             </div>
                         </div>
                     </form>

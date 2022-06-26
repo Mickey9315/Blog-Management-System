@@ -5,7 +5,7 @@
         <!-- Card Columns -->
         <div class="card card_border mb-5">
           <div class="cards__heading">
-            <h3>Posts List</h3>
+            <h3>Category List</h3>
             <div class="d-flex justify-content-end">
             <a  type="button" class="btn btn-primary " href="{{route('category.list')}}"><i class="fa fa-plus" aria-hidden="true"></i> Add category</a>
             </div>

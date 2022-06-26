@@ -2,7 +2,7 @@
 
 <!-- logo start -->
 <div class="logo">
-  <h1><a href="index.html">BMS</a></h1>
+  <h1><a href="l">BMS</a></h1>
 </div>
 
 <div class="logo-icon text-center">
