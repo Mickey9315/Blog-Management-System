@@ -27,6 +27,9 @@ Route::get('/', function () {
 Route::get('postList',[PostController::class,'showPostLists'])->name('post.list');
 Route::get('create',[PostController::class,'createPost'])->name('post.create');
 Route::post('store',[PostController::class,'storePost'])->name('post.store');
+Route::get('editPost/{id}',[PostController::class,'editPost'])->name('post.edit');
+Route::put('updatePost/{id}',[PostController::class,'updatePost'])->name('post.update');
+Route::get('deletePost/{post_id}',[PostController::class,'deletePost'])->name('post.delete');
 
 
 //category

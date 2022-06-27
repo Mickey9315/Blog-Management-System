@@ -10,9 +10,18 @@
               <div class="card card_border border-primary-top p-4">
                 <i class="lnr lnr-users"> </i>
                 <h3 class="text-primary number">29.75 M</h3>
-                <p class="stat-text">Total Users</p>
+                <p class="stat-text">Total Post</p>
               </div>
             </div>
+
+            <div class="col-sm-6 pr-sm-2 statistics-grid">
+              <div class="card card_border border-primary-top p-4">
+                <i class="lnr lnr-users"> </i>
+                <h3 class="text-primary number">29.75 M</h3>
+                <p class="stat-text">Total Category</p>
+              </div>
+            </div>
+
             <div class="col-sm-6 pl-sm-2 statistics-grid">
               <div class="card card_border border-primary-top p-4">
                 <i class="lnr lnr-eye"> </i>

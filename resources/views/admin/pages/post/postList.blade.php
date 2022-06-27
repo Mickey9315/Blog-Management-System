@@ -39,9 +39,11 @@
                         
                         </td>
                         <td>{{$post->status}}</td>
-                        <td>
-                              <a class='btn btn-info btn-sm m-2' href="#">Edit</a>
-                              <a class='btn btn-danger btn-sm' href="#" onclick="return confirm('Are you sure to Delete??')">Delete</a>
+                        <td class="d-flex">
+                              
+                              <a class='btn btn-primary btn-sm m-2' href="{{route('post.edit',$post->id)}}">published</a>
+                              <a class='btn btn-info btn-sm m-2' href="{{route('post.edit',$post->id)}}">Edit</a>                          
+                              <a class='btn btn-danger btn-sm m-2' href="{{route('post.delete',$post->id)}}" onclick="return confirm('Are you sure to Delete??')">Delete</a>
                         </td>
                         </tr>
                         @endforeach
