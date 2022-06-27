@@ -9,7 +9,8 @@ class CategoryController extends Controller
 {
     function showCategoryList()
     {
-        return view('admin.pages.category.categoryList');
+        $categories=Category::all();
+        return view('admin.pages.category.categoryList',compact('categories'));
     }
 
     function createCategory()

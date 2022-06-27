@@ -17,9 +17,9 @@ class PostController extends Controller
     public function createPost()
     {
      $categories=Category::all();
-     
+     $posts=Post::all();
      //dd($categories);
-      return view('admin.pages.post.createPost',compact('categories'));
+      return view('admin.pages.post.createPost',compact('categories','posts'));
     }
     
     public function storePost(Request $request)
@@ -37,7 +37,7 @@ class PostController extends Controller
      Post::create([
 
           'title'=>$request->title,
-          'description'=>$request->description,
+          'description'=>strip_tags($request->description),
           'category_id'=>$request->category,
           'image'=>$filename,
 

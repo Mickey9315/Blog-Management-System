@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->integer('category_id');
             $table->longText('description');
             $table->string('image');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

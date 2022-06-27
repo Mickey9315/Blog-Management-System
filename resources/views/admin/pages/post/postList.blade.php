@@ -30,11 +30,15 @@
                         <th scope="row">{{$key+1}}</th>
                         <td>{{$post->title}}</td>
                         <td>{{$post->category->name}}</td>
-                        <td>{{$post->description}}</td>
+                        <td>{{(strip_tags($post->description))}}</td>
                         <td>
                          <img src="{{url('/uploads/'.$post->image)}}" width="100px" alt="File not found">
+                        
                         </td>
-                        <td></td>
+                        <td>
+                              <a class='btn btn-info btn-sm m-2' href="#">Edit</a>
+                              <a class='btn btn-danger btn-sm' href="#" onclick="return confirm('Are you sure to Delete??')">Delete</a>
+                        </td>
                         </tr>
                         @endforeach
                     </tbody>

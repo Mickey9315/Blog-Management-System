@@ -37,6 +37,7 @@
 
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Description</label>
+                      
                             <div class="col-sm-10">
                                      <textarea name="description" class="form-control" name="summernote" id="summernote"></textarea>                       
                             </div>
@@ -75,7 +76,9 @@
 <script type="text/javascript">
     $('#summernote').summernote({
         height: 400
+        
     });
+   
 </script>
 
 @endsection
