@@ -38,4 +38,29 @@ class CategoryController extends Controller
          ]);
          return redirect()->back();
     }
+
+    function editCategory($id)
+    {
+        $category =Category::find($id);
+        return view('admin.pages.category.edit',compact('category'));
+    }
+
+    function updateCategory(Request $request,$id)
+    {
+        $category =Category::find($id);
+        $category_image = $category->image;
+
+        if($request->hasFile('image'))
+        {
+            
+            $category_image = date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads', $category_image);
+        }
+
+        $category->update([
+            'name'=>$request->name,
+            'image'=>$category_image
+        ]);
+        return redirect()->back()->with('success',' Update successfully..');
+    }
 }

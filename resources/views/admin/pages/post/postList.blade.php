@@ -12,15 +12,17 @@
           </div>
           <div class="card-body">
             
-           
-            <table class="table">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
                         <th scope="col">No</th>
+                        <th scope="col">Date</th>    
                         <th scope="col">Tital</th>
                         <th scope="col">Category</th>
                         <th scope="col">Description</th>
                         <th scope="col">Image</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -28,6 +30,7 @@
                       @foreach($posts as $key=>$post)
                         <tr>
                         <th scope="row">{{$key+1}}</th>
+                        <td>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</td>
                         <td>{{$post->title}}</td>
                         <td>{{$post->category->name}}</td>
                         <td>{{(strip_tags($post->description))}}</td>
@@ -35,6 +38,7 @@
                          <img src="{{url('/uploads/'.$post->image)}}" width="100px" alt="File not found">
                         
                         </td>
+                        <td>{{$post->status}}</td>
                         <td>
                               <a class='btn btn-info btn-sm m-2' href="#">Edit</a>
                               <a class='btn btn-danger btn-sm' href="#" onclick="return confirm('Are you sure to Delete??')">Delete</a>
@@ -43,6 +47,7 @@
                         @endforeach
                     </tbody>
                 </table>
+          </div>
               </div>
               
               </div>

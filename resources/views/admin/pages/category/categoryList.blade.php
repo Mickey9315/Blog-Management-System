@@ -7,7 +7,7 @@
           <div class="cards__heading">
             <h3>Category List</h3>
             <div class="d-flex justify-content-end">
-            <a  type="button" class="btn btn-primary " href="{{route('category.list')}}"><i class="fa fa-plus" aria-hidden="true"></i> Add category</a>
+            <a  type="button" class="btn btn-primary " href="{{route('createCategory')}}"><i class="fa fa-plus" aria-hidden="true"></i> Add category</a>
             </div>
           </div>
           <div class="card-body">
@@ -32,7 +32,7 @@
                         </td>
                         <td>
                             
-                              <a class='btn btn-info btn-sm' href="#">Edit</a>
+                              <a class='btn btn-info btn-sm' href="{{route('category.edit',$category->id)}}">Edit</a>
                               <a class='btn btn-danger btn-sm' href="#" onclick="return confirm('Are you sure to Delete??')">Delete</a>
 
                         </td>

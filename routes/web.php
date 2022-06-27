@@ -28,7 +28,10 @@ Route::get('postList',[PostController::class,'showPostLists'])->name('post.list'
 Route::get('create',[PostController::class,'createPost'])->name('post.create');
 Route::post('store',[PostController::class,'storePost'])->name('post.store');
 
+
 //category
 Route::get('categoryList',[CategoryController::class,'showCategoryList'])->name('category.list');
 Route::get('/createCategory',[CategoryController::class,'createCategory'])->name('createCategory');
 Route::post('storeCategory',[CategoryController::class,'storeCategory'])->name('category.store');
+Route::get('editCategory/{id}',[CategoryController::class,'editCategory'])->name('category.edit');
+Route::put('updateCategory/{id}',[CategoryController::class,'updateCategory'])->name('category.update');
