@@ -38,3 +38,9 @@ Route::get('/createCategory',[CategoryController::class,'createCategory'])->name
 Route::post('storeCategory',[CategoryController::class,'storeCategory'])->name('category.store');
 Route::get('editCategory/{id}',[CategoryController::class,'editCategory'])->name('category.edit');
 Route::put('updateCategory/{id}',[CategoryController::class,'updateCategory'])->name('category.update');
+
+//frontend routes
+
+Route::get('/home',function(){
+    return view('frontend.home');
+});
