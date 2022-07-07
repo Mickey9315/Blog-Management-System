@@ -47,7 +47,7 @@
             <div class="swiper sliderFeaturedPosts">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('frontend/assets/img/post-slide-1.jpg');">
+                  <a href="{{route('postDetails')}}" class="img-bg d-flex align-items-end" style="background-image: url('frontend/assets/img/post-slide-1.jpg');">
                     <div class="img-bg-inner">
                       <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
@@ -104,15 +104,15 @@
           <div class="col-lg-6">
           
             <div class="post-entry-1 lg">
-              <a href="single-post.html"><img src="{{url('/uploads/'.$post->image)}}"alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-              <h2><a href="single-post.html">{{$post->tital}}</a></h2>
-              <p class="mb-4 d-block">{{$post->description}}</p>
+              <a href="{{route('postDetails')}}"><img src="{{url('/uploads/'.$post->image)}}"alt="" class="img-fluid"></a>
+              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</span></div>
+              <h2><a href="{{route('postDetails')}}">{{$post->tital}}</a></h2>
+              <p class="mb-4 d-block">{{Str::limit($post->description,320)}}</p>
 
               <div class="d-flex align-items-center author">
                 <div class="photo"><img src="{{url('frontend/assets/img/person-1.jpg')}}" alt="" class="img-fluid"></div>
                 <div class="name">
-                  <h3 class="m-0 p-0">Cameron Williamson</h3>
+                  <h3 class="m-0 p-0">Admin</h3>
                 </div>
             
               </div>

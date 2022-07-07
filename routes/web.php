@@ -43,3 +43,4 @@ Route::put('updateCategory/{id}',[CategoryController::class,'updateCategory'])->
 //frontend routes
 
 Route::get('/',[HomeController::class,'home']);
+Route::get('/details',[HomeController::class,'postDetails'])->name('postDetails');

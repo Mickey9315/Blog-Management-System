@@ -14,4 +14,11 @@ class HomeController extends Controller
         $posts=Post::all();
         return view('frontend.home',compact('categories','posts'));
     }
+
+    function postDetails()
+    {
+        $posts_details=Post::all();
+        return view('frontend.pages.postDetails',compact('posts_details'));
+
+    }
 }
