@@ -44,7 +44,7 @@
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Description</label>
                       
                             <div class="col-sm-10">
-                                     <textarea value="{{$post->description}}" name="description" class="form-control"  id="summernote"></textarea>
+                                     <textarea value="{{$post->description}}" name="description" class="form-control"  id="summernote">{!! $post->description !!}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -81,8 +81,7 @@
 <!-- summernote css/js -->
 <script type="text/javascript">
     $('#summernote').summernote({
-        height: 400
-        
+        height: 200     
     });
    
 </script>

@@ -33,7 +33,7 @@
                         <td>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</td>
                         <td>{{$post->title}}</td>
                         <td>{{$post->category->name}}</td>
-                        <td>{{(strip_tags($post->description))}}</td>
+                        <td>{!! $post->description !!}</td>
                         <td>
                          <img src="{{url('/uploads/'.$post->image)}}" width="100px" alt="File not found">
                         

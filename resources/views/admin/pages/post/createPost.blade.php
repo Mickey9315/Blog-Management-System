@@ -48,7 +48,7 @@
                                     <div class="custom-file">
                                             <input name="image" type="file" class="custom-file-input" id="validatedCustomFile" required>
                                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                          
                                         </div>
                              </div>
                          </div>
@@ -74,10 +74,13 @@
 
 <!-- summernote css/js -->
 <script type="text/javascript">
-    $('#summernote').summernote({
-        height: 400
-        
-    });
+    $('#summernote').summernote(
+        {
+        height: 300,
+  },
+  );
+
+
    
 </script>
 

@@ -106,8 +106,8 @@
             <div class="post-entry-1 lg">
               <a href="{{route('postDetails')}}"><img src="{{url('/uploads/'.$post->image)}}"alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</span></div>
-              <h2><a href="{{route('postDetails')}}">{{$post->tital}}</a></h2>
-              <p class="mb-4 d-block">{{Str::limit($post->description,320)}}</p>
+              <h2><a href="{{route('postDetails')}}">{!! $post->title !!}</a></h2>
+              <p class="mb-4 d-block">{!! $post->description !!}</p>
 
               <div class="d-flex align-items-center author">
                 <div class="photo"><img src="{{url('frontend/assets/img/person-1.jpg')}}" alt="" class="img-fluid"></div>
