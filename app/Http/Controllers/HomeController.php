@@ -12,6 +12,8 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         $posts=Post::all();
+        $data=Post::all()->take(10);
+        //dd($data);
         return view('frontend.home',compact('categories','posts'));
     }
 

@@ -100,14 +100,15 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-        @foreach($posts as $post)
-          <div class="col-lg-6">
-          
-            <div class="post-entry-1 lg">
+      
+          <div class="col-lg- 4">
+        
+            <div class="">
+            @foreach($posts as $post)
               <a href="{{route('postDetails')}}"><img src="{{url('/uploads/'.$post->image)}}"alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</span></div>
               <h2><a href="{{route('postDetails')}}">{!! $post->title !!}</a></h2>
-              <p class="mb-4 d-block">{!! $post->description !!}</p>
+              <!-- <p class="mb-4 d-block">{!! $post->description !!}</p> -->
 
               <div class="d-flex align-items-center author">
                 <div class="photo"><img src="{{url('frontend/assets/img/person-1.jpg')}}" alt="" class="img-fluid"></div>
@@ -120,6 +121,7 @@
             </div>
             @endforeach
           </div>
+        </div>
 
           <!-- <div class="col-lg-8">
             <div class="row g-5">

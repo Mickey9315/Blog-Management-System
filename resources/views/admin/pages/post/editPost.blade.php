@@ -51,9 +51,9 @@
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Image</label>
                             <div class="col-sm-10">
                                     <div class="custom-file">
-                                            <input name="image" type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                            
+                                            <input name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  
                                         </div>
                                         <img class="mt-4" style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$post->image)}}" alt="Not found">
                              </div>
