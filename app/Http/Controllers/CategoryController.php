@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -23,8 +23,7 @@ class CategoryController extends Controller
           $filename=null;
           if ($request->hasFile('image'))
           {
-          
-          $file=$request->file('image');
+                    $file=$request->file('image');
           $filename=date('Ymdhms').'.'.$file->getclientOriginalExtension();
           $file->storeAs('/uploads',$filename);
           }
@@ -33,13 +32,14 @@ class CategoryController extends Controller
      Category::create([
 
           'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
-          'name'=>$request->name,
+          'slug'=>$request->slug,
+          'description'=>$request->description,
+          'meta_title'=>$request->meta_title,
+          'meta_descrition'=>$request->meta_descrition,
+          'meta_keyword'=>$request->meta_keyword,
+          'navbar_status'=>$request->navbar_status,
+          'status'=>$request->status,
+          'created_by'=>Auth::user()->id,
           'image'=>$filename,
 
          ]);
