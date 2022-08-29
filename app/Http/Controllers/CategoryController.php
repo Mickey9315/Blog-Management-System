@@ -33,6 +33,13 @@ class CategoryController extends Controller
      Category::create([
 
           'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
+          'name'=>$request->name,
           'image'=>$filename,
 
          ]);

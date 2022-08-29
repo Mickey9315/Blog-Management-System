@@ -15,11 +15,21 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+        
             $table->integer('category_id');
-            $table->longText('description');
+            $table->string('name');
+            $table->string('slug');
+            $table->mediumText('description');
             $table->string('image');
-            $table->string('status')->default('pending');
+            $table->string('yt-iframe');
+
+            $table->string('meta_title');
+            $table->text('meta_descrition');
+            $table->text('meta_keyword');
+            
+            $table->tinyInteger('navbar_status')->default('0');
+            $table->tinyInteger('status')->default('0');
+            $table->integer('created_by');
             $table->timestamps();
         });
     }

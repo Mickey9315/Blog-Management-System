@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable=[ 'title','description','category_id','image'];
+    protected $fillable=[ 'name','slug','description','category_id','image','yt-iframe',
+    'meta_title','meta_descrition','meta_keyword','navbar_status','status','created_by'
+];
 
 
     public function category()
