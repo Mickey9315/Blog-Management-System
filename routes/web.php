@@ -14,6 +14,12 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
+//login
+Route::get('login', [RegisterController::class, 'index'])->name('login');
+Route::post('post-login', [RegisterController::class, 'postLogin'])->name('login.post'); 
+Route::get('registration', [RegisterController::class, 'registration'])->name('register');
+Route::post('post-registration', [RegisterController::class, 'postRegistration'])->name('register.post'); 
+
 // post
 Route::get('postList',[PostController::class,'showPostLists'])->name('post.list');
 Route::get('create',[PostController::class,'createPost'])->name('post.create');

@@ -35,11 +35,11 @@ class CategoryController extends Controller
           'slug'=>$request->slug,
           'description'=>$request->description,
           'meta_title'=>$request->meta_title,
-          'meta_descrition'=>$request->meta_descrition,
+          'meta_descrition'=>$request->meta_description,
           'meta_keyword'=>$request->meta_keyword,
           'navbar_status'=>$request->navbar_status,
           'status'=>$request->status,
-          'created_by'=>Auth::user()->id,
+          'created_by'=>1,
           'image'=>$filename,
 
          ]);

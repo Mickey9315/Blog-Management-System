@@ -50,10 +50,10 @@
                         <h4>Status Mode</h4><hr>
                         <div class="form-group">
                             <label for="inputAddress" class="input__label ">Navbar Status</label>
-                            <input name="navbar_status" type="checkbox" class="ml-3" id="inputAddress">
+                            <input name="navbar_status" type="checkbox" class="ml-3" id="inputAddress" value="1">
                             
                             <label for="inputAddress" class="input__label ml-3">Status</label>
-                            <input name="status" type="checkbox" class="ml-3" id="inputAddress">
+                            <input name="status" type="checkbox" class="ml-3" id="inputAddress" value="1">
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-style mt-4">Save</button>
