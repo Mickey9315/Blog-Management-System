@@ -31,7 +31,7 @@
                         <tr>
                         <th scope="row">{{$key+1}}</th>
                         <td>{{$post->created_at->formatLocalized('%A %e %B %Y')}}</td>
-                        <td>{{$post->title}}</td>
+                        <td>{{$post->name}}</td>
                         <td>{{$post->category->name}}</td>
                         <td>{!! $post->description !!}</td>
                         <td>

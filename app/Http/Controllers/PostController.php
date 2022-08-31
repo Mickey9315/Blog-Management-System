@@ -38,12 +38,12 @@ class PostController extends Controller
      Post::create([
 
           'name'=>$request->name,
+          'category_id'=>$request->category,
           'slug'=>$request->slug,
           'description'=>$request->description,
           'meta_title'=>$request->meta_title,
           'meta_descrition'=>$request->meta_descrition,
           'meta_keyword'=>$request->meta_keyword,
-          'navbar_status'=>$request->navbar_status,
           'yt-iframe'=>$request->yt_iframe,
           'status'=>$request->status == true ? '1':'0',
           'created_by'=>1,

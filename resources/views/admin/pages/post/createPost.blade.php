@@ -17,9 +17,9 @@
                     <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label input__label">Title</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label input__label">Name</label>
                             <div class="col-sm-10">
-                                <input name="title" type="text" class="form-control input-style" id="inputEmail3"
+                                <input name="name" type="text" class="form-control input-style" id="inputEmail3"
                                     placeholder="Post Title">
                             </div>
                         </div>
@@ -43,16 +43,56 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Slug</label>
+                            <div class="col-sm-10">
+                            <input name="slug" type="text" class="form-control input-style" id="inputEmail3"
+                                    placeholder="Post slug">
+                             </div>
+                         </div>
+                         <div class="form-group row">
+                            
+                            <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Meta Title</label>
+                            <div class="col-sm-10">
+                            <input name="meta_title" type="text" class="form-control input-style" id="inputEmail3"
+                                    placeholder="Post Meta Title">
+                             </div>
+                         </div>
+                         <div class="form-group row">
+                            
+                            <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Meta Description</label>
+                            <div class="col-sm-10">
+                            <input name="meta_descrition" type="text" class="form-control input-style" id="inputEmail3"
+                                    placeholder="Post Meta Description">
+                             </div>
+                         </div>
+                         <div class="form-group row">
+                            
+                            <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Meta Keyword</label>
+                            <div class="col-sm-10">
+                            <input name="meta_keyword" type="text" class="form-control input-style" id="inputEmail3"
+                                    placeholder=" Post Meta Keyword">
+                             </div>
+                         </div>
+
+                         <div class="form-group row">
+                            
+                            <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Video</label>
+                            <div class="col-sm-10">
+                            <input name="yt_iframe" type="text" class="form-control input-style" id="inputEmail3"
+                                    placeholder="Post video link">
+                             </div>
+                         </div>
+                         
+                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label input__label">Image</label>
                             <div class="col-sm-10">
                                     <div class="custom-file">
                                             <input name="image" type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <label class="custom-file-label" for="validatedCustomFile">Upload post Image...</label>
                                           
                                         </div>
                              </div>
                          </div>
-
                                     
                         <div class="form-group row">
                             <div class="col-sm-10">
