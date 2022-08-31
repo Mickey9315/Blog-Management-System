@@ -23,6 +23,8 @@
 
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="{{route('register')}}">Register</a></li>
+          <li><a href="{{route('login')}}">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -40,6 +42,7 @@
             <span class="icon bi-search"></span>
             <input type="text" placeholder="Search" class="form-control">
             <button class="btn js-search-close"><span class="bi-x"></span></button>
+    
           </form>
         </div><!-- End Search Form -->
 

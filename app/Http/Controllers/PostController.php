@@ -46,7 +46,7 @@ class PostController extends Controller
           'navbar_status'=>$request->navbar_status,
           'yt-iframe'=>$request->yt_iframe,
           'status'=>$request->status == true ? '1':'0',
-          'created_by'=>Auth::user()->id,
+          'created_by'=>1,
           'image'=>$filename,
 
          ]);
